@@ -31,7 +31,7 @@ SYSTEM_MSG   = {"role": "system", "content": "You are a helpful assistant."}
 # --- Setup client -----------------------------------------------------------
 
 # Load token from env or fallback to token.txt
-os.environ["GITHUB_TOKEN"] = "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"
+os.environ["GITHUB_TOKEN"] = "" // Replace with github token
 token = os.getenv("GITHUB_TOKEN")
 if not token:
     try:
