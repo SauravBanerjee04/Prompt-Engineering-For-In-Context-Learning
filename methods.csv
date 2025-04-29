@@ -1,0 +1,159 @@
+code,Task Number,Type of Prompt,Zero-shot prompt,Codestral 25.01 Transcript,OpenAI GPT-4o mini,Second Type of Prompt,Prompt (if applicable),Codestral 25.01 Transcript,OpenAI GPT-4o mini
+"public Map <String , Integer > countWordFrequency(List <String > words) {
+ Map <String , Integer > freqMap = new HashMap <>();
+ for (String word : words) {
+ freqMap.put(word , freqMap.getOrDefault(word , 0) + 1);
+ }
+ return freqMap;
+ }",1,Zero-Shot,"Summarize the functionality of the following method:\n\""public Map <String , Integer > countWordFrequency(List <String > words) {\n Map <String , Integer > freqMap = new HashMap <>();\n for (String word : words) {\n freqMap.put(word , freqMap.getOrDefault(word , 0) + 1);\n }\n return freqMap;\n }",,,Prompt-Chaining,,,
+"def sum_range(start , end):
+  total = 0
+  for i in range(start , end):
+  total += i
+  return total",2,Zero-Shot,"Identify and fix the off-by-one error in this function:\n'''\n\""def sum_range(start , end):\n  total = 0\n  for i in range(start , end):\n  total += i\n  return total\""\n'''",,,Few-shot,,,
+"int* getArray(int size) {
+ int arr[size]; // Warning: local array
+ return arr; // Bug: returning pointer to local variable
+ 
+ }",3,Zero-Shot,"Identify and fix the off-by-one error in this function:\n'''\n\""def sum_range(start , end):\n  total = 0\n  for i in range(start , end):\n  total += i\n  return total\""\n'''",,,Chain-of-thought,"Identify and fix the off-by-one error in this function and work through it step by step for me:\n'''\n\""def sum_range(start , end):\n  total = 0\n  for i in range(start , end):\n  total += i\n  return total\""\n'''",,
+"def is_valid_email(email):
+  # TODO: Complete using regex
+  pass",4,Zero-Shot,Complete the function using regex to validate basic email addresses:\n'''\ndef is_valid_email(email):\n  # TODO: Complete using regex\n  pass\n''',,,Self-Consistency,Complete the function using regex to validate basic email addresses:\n'''\ndef is_valid_email(email):\n  # TODO: Complete using regex\n  pass\n''',,
+"from flask import Flask , jsonify
+ 
+ app = Flask(__name__)
+ 
+ @app.route('/greet/<username>')
+ def greet(username):
+  # TODO: Return a JSON greeting
+  pass",5,Zero-Shot,"Create a ‘/greet/<username>‘ endpoint that returns a JSON greeting:\n'''\n\""from flask import Flask , jsonify\n \n app = Flask(__name__)\n \n @app.route('/greet/<username>')\n def greet(username):\n  # TODO: Return a JSON greeting\n  pass\""\n'''",,,Prompt-Chaining,,,
+"''=-- TODO: Design schema with appropriate keys and constraints
+-- Tables: users(id, name), books(id, title), reviews(id, user_id, book_id,
+rating)'''",6,Zero-Shot,"Write the schema for a review app with users, books, and reviews:\n'''\n=-- TODO: Design schema with appropriate keys and constraints\n-- Tables: users(id, name), books(id, title), reviews(id, user_id, book_id,\nrating)\n'''",,,Chain-of-thought,"Work through the following problem, thinking about it step by step. Write the schema for a review app with users, books, and reviews:\n'''\n=-- TODO: Design schema with appropriate keys and constraints\n-- Tables: users(id, name), books(id, title), reviews(id, user_id, book_id,\nrating)\n'''",,
+"public int getLength(String s) {
+ return s.length (); // What if s is null?
+ 
+ }",7,Zero-Shot,Identify any null dereference risk:\n'''\npublic int getLength(String s) {\n return s.length (); // What if s is null?\n \n }\n''',,,Prompt-Chaining,,,
+"def parse_csv_line(line):
+  return line.split(',') # Incomplete: doesn't handle quoted fields",8,Zero-Shot,"Improve the parser to support quoted fields:\n'''\ndef parse_csv_line(line):\n  return line.split(',') # Incomplete: doesn't handle quoted fields\n''''",,,Few-shot,,,
+"data class Product(val id: Int , val name: String , val price: Double)
+ 
+ // TODO: Create GET and POST endpoints using Ktor",9,Zero-Shot,"Convert the data class to a REST API using Ktor:\n\""data class Product(val id: Int , val name: String , val price: Double)\n \n // TODO: Create GET and POST endpoints using Ktor\""",,,Few-shot,,,
+"def reverse_words(sentence):
+  return ' '.join(sentence.split()[::-1])",10,Zero-Shot,Write a brief summary of the function:\n'''\ndef reverse_words(sentence):\n  return ' '.join(sentence.split()[::-1])\n''',,,Self-Consistency,Write a brief summary of the function:\n'''\ndef reverse_words(sentence):\n  return ' '.join(sentence.split()[::-1])\n''',,
+"# This function checks if a number is prime
+ def is_prime(n):
+  if n <= 1:
+  return False
+ 
+  for i in range(2, int(n**0.5) +1):
+  if n % i == 0:
+ 
+  return False
+  return True",11,Zero-Shot,Can you generate a python function that returns whether or not a function is prime (call it is_prime(n)),,,Chain-of-thought,Can you work step-by-step to generate a python function that returns whether or not a function is prime (call it is_prime(n)),,
+"def factorial(n):
+  result = 1
+  for i in range(1, n):
+  result *= i
+  return result",12,Zero-Shot,"Fix the bug when input is 0:\n'''\ndef factorial(n):\n  result = 1\n  for i in range(1, n):\n  result *= i\n  return result\n'''",,,Self-Consistency,"Fix the bug when input is 0:\n'''\ndef factorial(n):\n  result = 1\n  for i in range(1, n):\n  result *= i\n  return result\n'''",,
+"struct Node {
+ int data;
+ struct Node* next;
+ 
+ };
+ 
+ void deleteNode(struct Node** head , int key) {
+ // TODO: Implement node deletion
+ 
+ }",13,Zero-Shot,"Implement node deletion by value:\n'''\nstruct Node {\n int data;\n struct Node* next;\n \n };\n \n void deleteNode(struct Node** head , int key) {\n // TODO: Implement node deletion\n \n }\n'''",,,Self-Consistency,"Implement node deletion by value:\n'''\nstruct Node {\n int data;\n struct Node* next;\n \n };\n \n void deleteNode(struct Node** head , int key) {\n // TODO: Implement node deletion\n \n }\n'''",,
+"def fibonacci(n):
+  # TODO: Base cases and recursive call
+  pass",14,Zero-Shot,"""Complete the recursive function for Fibonacci:\n'''\ndef fibonacci(n):\n  # TODO: Base cases and recursive call\n  pass\n'''",,,Few-shot,,,
+"class Person:
+ def __init__(self):
+  # TODO: Add name , age , and optional email
+  pass",15,Zero-Shot,"Complete the class constructor:\n'''\nclass Person:\n def __init__(self):\n  # TODO: Add name , age , and optional email\n  pass\n'''",,,Few-shot,,,
+"public int binarySearch(int[] arr , int target) {
+ int left = 0, right = arr.length - 1;
+ while (left <= right) {
+ 
+ int mid = (left + right) / 2;
+ // TODO: Compare and adjust bounds
+ 
+ }
+ return -1;
+ 
+ }",16,Zero-Shot,"Complete the binary search implementation:\n'''\npublic int binarySearch(int[] arr , int target) {\n int left = 0, right = arr.length - 1;\n while (left <= right) {\n \n int mid = (left + right) / 2;\n // TODO: Compare and adjust bounds\n \n }\n return -1;\n \n }\n'''",,,Self-Consistency,"Complete the binary search implementation:\n'''\npublic int binarySearch(int[] arr , int target) {\n int left = 0, right = arr.length - 1;\n while (left <= right) {\n \n int mid = (left + right) / 2;\n // TODO: Compare and adjust bounds\n \n }\n return -1;\n \n }\n'''",,
+"// Supposed to return true if x is even
+ bool isOdd(int x) {
+ 
+ return x % 2 == 0; // Logic contradicts function name
+ }",17,Zero-Shot,Resolve inconsistency between function name and logic:\n'''\n// Supposed to return true if x is even\nbool isOdd (int x ) {\nreturn x % 2 == 0; // Logic contradicts function name\n}\n''',,,Prompt-Chaining,,,
+"function isEven(n) {
+ return n % 2; // Returns 1 or 0, not true/false
+ 
+ }",18,Zero-Shot,"Identify and fix the bug in my JavaScript code:\n'''\n\""function isEven(n) {\n return n % 2; // Returns 1 or 0, not true/false\n \n }\""\n'''",,,Self consistency,"Identify and fix the bug in my JavaScript code:\n'''\n\""function isEven(n) {\n return n % 2; // Returns 1 or 0, not true/false\n \n }\""\n'''",,
+"// Function that validates an input , calculates square , and returns result
+ int process(int x) {
+ 
+ if (x < 0) return -1;
+ return x * x;
+ 
+ }",19,Zero-Shot,"Decompose the high-level comment/summary of the c++ code into logical steps:\n'''\n\""// Function that validates an input , calculates square , and returns result\n int process(int x) {\n \n if (x < 0) return -1;\n return x * x;\n \n }\""\n'''",,,Self-Consistency,"Decompose the high-level comment/summary of the c++ code into logical steps:\n'''\n\""// Function that validates an input , calculates square , and returns result\n int process(int x) {\n \n if (x < 0) return -1;\n return x * x;\n \n }\""\n'''",,
+"def calculate_average(scores):
+  total = 0
+  # TODO: Complete to return average
+  pass",20,Zero-Shot,Complete the function based on intent:\n'''\ndef calculate_average(scores):\n  total = 0\n  # TODO: Complete to return average\n  pass\n''',,,Prompt-Chaining,,,
+"# utils.py - Script to parse and summarize numeric CSV files
+ 
+ import csv
+ 
+ def read_csv(filepath):
+  with open(filepath , 'r') as f:
+  return [row for row in csv.reader(f)]
+ 
+ def summarize_column(data , index):
+  values = [float(row[index ]) for row in data [1:]] # skip header
+  total = sum(values)
+  avg = total / len(values)
+  return total , avg
+ 
+ def main():
+  filepath = 'data.csv'
+  data = read_csv(filepath)
+  total , avg = summarize_column(data , 1)
+  print(""Total:"", total)
+  print(""Average:"", avg)
+ 
+ if __name__ == '__main__':
+  main()",21,Zero-Shot,"Analyze the following utility script. Identify any potential logic issues or design flaws. Then, refactor it for better readability, correctness, and safety\""\n'''\n# utils.py - Script to parse and summarize numeric CSV files\n \n import csv\n \n def read_csv(filepath):\n  with open(filepath , 'r') as f:\n  return [row for row in csv.reader(f)]\n \n def summarize_column(data , index):\n  values = [float(row[index ]) for row in data [1:]] # skip header\n  total = sum(values)\n  avg = total / len(values)\n  return total , avg\n \n def main():\n  filepath = 'data.csv'\n  data = read_csv(filepath)\n  total , avg = summarize_column(data , 1)\n  print(\""Total:\"", total)\n  print(\""Average:\"", avg)\n \n if __name__ == '__main__':\n  main()\n'''\n",,,Chain-of-thought,"Work step by step to do this and analyze the steps. Analyze the following utility script. Identify any potential logic issues or design flaws. Then, refactor it for better readability, correctness, and safety\""\n'''\n# utils.py - Script to parse and summarize numeric CSV files\n \n import csv\n \n def read_csv(filepath):\n  with open(filepath , 'r') as f:\n  return [row for row in csv.reader(f)]\n \n def summarize_column(data , index):\n  values = [float(row[index ]) for row in data [1:]] # skip header\n  total = sum(values)\n  avg = total / len(values)\n  return total , avg\n \n def main():\n  filepath = 'data.csv'\n  data = read_csv(filepath)\n  total , avg = summarize_column(data , 1)\n  print(\""Total:\"", total)\n  print(\""Average:\"", avg)\n \n if __name__ == '__main__':\n  main()\n'''\n",,
+"# file_processor.py - Incomplete script for processing text files
+ 
+ import string
+ 
+ def load_file(filepath):
+  with open(filepath , 'r') as f:
+  return f.readlines ()
+ 
+ def clean_line(line):
+  # TODO: Remove punctuation and make lowercase
+  pass
+ 
+ def count_words(lines):
+  word_counts = {}
+  for line in lines:
+  clean = clean_line(line)
+  for word in clean.split ():
+  word_counts[word] = word_counts.get(word , 0) + 1
+  return word_counts
+ 
+ def main():
+ 
+  filepath = 'input.txt'
+  lines = load_file(filepath)
+  counts = count_words(lines)
+  for word , count in sorted(counts.items()):
+  print(f""{word}: {count}"")
+ 
+ if __name__ == '__main__':
+  main()",22,Zero-Shot,"Complete the following file-processing script. The goal is to clean each line, remove punctuation, and count word frequencies correctly.:\n\""# file_processor.py - Incomplete script for processing text files\n \n import string\n \n def load_file(filepath):\n  with open(filepath , 'r') as f:\n  return f.readlines ()\n \n def clean_line(line):\n  # TODO: Remove punctuation and make lowercase\n  pass\n \n def count_words(lines):\n  word_counts = {}\n  for line in lines:\n  clean = clean_line(line)\n  for word in clean.split ():\n  word_counts[word] = word_counts.get(word , 0) + 1\n  return word_counts\n \n def main():\n \n  filepath = 'input.txt'\n  lines = load_file(filepath)\n  counts = count_words(lines)\n  for word , count in sorted(counts.items()):\n  print(f\""\""{word}: {count}\""\"")\n \n if __name__ == '__main__':\n  main()\""",,,Chain-of-thought,"Working step by step, complete the following file-processing script. The goal is to clean each line, remove punctuation, and count word frequencies correctly.:\n\""# file_processor.py - Incomplete script for processing text files\n \n import string\n \n def load_file(filepath):\n  with open(filepath , 'r') as f:\n  return f.readlines ()\n \n def clean_line(line):\n  # TODO: Remove punctuation and make lowercase\n  pass\n \n def count_words(lines):\n  word_counts = {}\n  for line in lines:\n  clean = clean_line(line)\n  for word in clean.split ():\n  word_counts[word] = word_counts.get(word , 0) + 1\n  return word_counts\n \n def main():\n \n  filepath = 'input.txt'\n  lines = load_file(filepath)\n  counts = count_words(lines)\n  for word , count in sorted(counts.items()):\n  print(f\""\""{word}: {count}\""\"")\n \n if __name__ == '__main__':\n  main()\""",,

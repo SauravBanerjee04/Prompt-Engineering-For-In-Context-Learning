@@ -1,0 +1,159 @@
+problem,code,Prompt 1,Prompt 2
+1,"public Map <String , Integer > countWordFrequency(List <String > words) {
+ Map <String , Integer > freqMap = new HashMap <>();
+ for (String word : words) {
+ freqMap.put(word , freqMap.getOrDefault(word , 0) + 1);
+ }
+ return freqMap;
+ }",Summarize the functionality of the following method:,Imagine you are a helpful coding assistant that is skilled at Java. Can you work through step by step and sumamrize the following method:
+2,"def sum_range(start , end):
+  total = 0
+  for i in range(start , end):
+  total += i
+  return total",Identify and fix the off-by-one error in this function:,Imagine you are a helpful coding assistant that is skilled at Python. Can you identify and fix the off-by-one error in this function and work though the problem step by step:
+3,"int* getArray(int size) {
+ int arr[size]; // Warning: local array
+ return arr; // Bug: returning pointer to local variable
+ 
+ }",Classify the type of bug in the following C++ function:,Imagine you are a helpful coding assistant skilled at C++. Classify the type of bug in the following C++ function:
+4,"def is_valid_email(email):
+  # TODO: Complete using regex
+  pass",Complete the function using regex to validate basic email addresses:,Imagine you are a helpful coding assignment. Complete the function using regex to validate basic email addresses and work though it step-by-step:
+5,"from flask import Flask , jsonify
+ 
+ app = Flask(__name__)
+ 
+ @app.route('/greet/<username>')
+ def greet(username):
+  # TODO: Return a JSON greeting
+  pass",Create a ‘/greet/‘ endpoint that returns a JSON greeting:,Work though this code step by step. Create a ‘/greet/‘ endpoint that returns a JSON greeting:
+6,"''=-- TODO: Design schema with appropriate keys and constraints
+-- Tables: users(id, name), books(id, title), reviews(id, user_id, book_id,
+rating)'''","Write the schema for a review app with users, books, and reviews:","Work through this problem step by step and give me the solutioin. Write the schema for a review app with users, books, and reviews:"
+7,"public int getLength(String s) {
+ return s.length (); // What if s is null?
+ 
+ }",Identify any null dereference risk:,Work though the logic of this problem step by step. Identify any null dereference risk in this code:
+8,"def parse_csv_line(line):
+  return line.split(',') # Incomplete: doesn‚Äôt handle quoted fields",Improve the parser to support quoted fields:,Work though this problem step by step by looking at the code and then thinking on how to do it by step. Improve the parser to support quoted fields:
+9,"data class Product(val id: Int , val name: String , val price: Double)
+ 
+ // TODO: Create GET and POST endpoints using Ktor",Convert the data class to a REST API using Ktor:,Work throught the problem step by step and explain it to me: Convert the data class to a REST API using Ktor:
+10,"def reverse_words(sentence):
+  return ' '.join(sentence.split()[::-1])",Write a brief summary of the function:,Think logically through the steps of the code step by step by reading it first and then analyzing it. Write a brief summary of the function:
+11,"# This function checks if a number is prime
+ def is_prime(n):
+  if n <= 1:
+  return False
+ 
+  for i in range(2, int(n**0.5) +1):
+  if n % i == 0:
+ 
+  return False
+  return True",Write a prompt that could generate the code:,"Work though this problem step by step, fully thinking it out and saying what you think. Write a prompt that could generate the code:"
+12,"def factorial(n):
+  result = 1
+  for i in range(1, n):
+  result *= i
+  return result",Fix the bug when input is 0:,Think though the code provided logically step by step and fix the bug when input is 0:
+13,"struct Node {
+ int data;
+ struct Node* next;
+ 
+ };
+ 
+ void deleteNode(struct Node** head , int key) {
+ // TODO: Implement node deletion
+ 
+ }",Implement node deletion by value:,Think though this problem step by step and say your thoughts as well as give me the code that has fixed implement node deletion by value:
+14,"def fibonacci(n):
+  # TODO: Base cases and recursive call
+  pass",Complete the recursive function for Fibonacci:,Work through it step by step and complete the recursive function for Fibonacci:
+15,"class Person:
+ def __init__(self):
+  # TODO: Add name , age , and optional email
+  pass",Complete the class constructor:,Work though the thought process step by step and then show the result of the task. Complete the class constructor:
+16,"public int binarySearch(int[] arr , int target) {
+ int left = 0, right = arr.length - 1;
+ while (left <= right) {
+ 
+ int mid = (left + right) / 2;
+ // TODO: Compare and adjust bounds
+ 
+ }
+ return -1;
+ 
+ }",Complete the binary search implementation:,Do this task step by step and logically. Complete the binary search implementation:
+17,"// Supposed to return true if x is even
+ bool isOdd(int x) {
+ 
+ return x % 2 == 0; // Logic contradicts function name
+ }",Resolve inconsistency between function name and logic:,Work though this task step by step and explain your analysis. Resolve inconsistency between function name and logic:
+18,"function isEven(n) {
+ return n % 2; // Returns 1 or 0, not true/false
+ 
+ }",Identify and fix the bug in JavaScript:,Work step-by-step to identify and fix the bug in JavaScript:
+19,"// Function that validates an input , calculates square , and returns result
+ int process(int x) {
+ 
+ if (x < 0) return -1;
+ return x * x;
+ 
+ }",Decompose the high-level comment/summary into logical steps:,Work step-by-step to decompose the high-level comment/summary into logical steps:
+20,"def calculate_average(scores):
+  total = 0
+  # TODO: Complete to return average
+  pass",Complete the function based on intent:,Work step-by-step to complete the function based on intent:
+21,"# utils.py - Script to parse and summarize numeric CSV files
+ 
+ import csv
+ 
+ def read_csv(filepath):
+  with open(filepath , 'r') as f:
+  return [row for row in csv.reader(f)]
+ 
+ def summarize_column(data , index):
+  values = [float(row[index ]) for row in data [1:]] # skip header
+  total = sum(values)
+  avg = total / len(values)
+  return total , avg
+ 
+ def main():
+  filepath = 'data.csv'
+  data = read_csv(filepath)
+  total , avg = summarize_column(data , 1)
+  print(""Total:"", total)
+  print(""Average:"", avg)
+ 
+ if __name__ == '__main__':
+  main()","Analyze the following utility script. Identify any potential logic issues or design flaws. Then, refactor it for better readability, correctness, and safety","Do this task step by step, thinking logically and analyzing the problem aloud: Analyze the following utility script. Identify any potential logic issues or design flaws. Then, refactor it for better readability, correctness, and safety"
+22,"# file_processor.py - Incomplete script for processing text files
+ 
+ import string
+ 
+ def load_file(filepath):
+  with open(filepath , 'r') as f:
+  return f.readlines ()
+ 
+ def clean_line(line):
+  # TODO: Remove punctuation and make lowercase
+  pass
+ 
+ def count_words(lines):
+  word_counts = {}
+  for line in lines:
+  clean = clean_line(line)
+  for word in clean.split ():
+  word_counts[word] = word_counts.get(word , 0) + 1
+  return word_counts
+ 
+ def main():
+ 
+  filepath = 'input.txt'
+  lines = load_file(filepath)
+  counts = count_words(lines)
+  for word , count in sorted(counts.items()):
+  print(f""{word}: {count}"")
+ 
+ if __name__ == '__main__':
+  main()","Complete the following file-processing script. The goal is to clean each line, remove punctuation, and count word frequencies correctly","Complete the following file-processing script, working step by step and analytically between every step explaining your reasoning. The goal is to clean each line, remove punctuation, and count word frequencies correctly"
